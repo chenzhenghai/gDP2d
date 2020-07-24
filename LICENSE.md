@@ -1,14 +1,14 @@
 Author: CHEN ZHENGHAI  
-Date:   29-NOV-2016
+Date:   24-July-2020
 
 ===============================================================================
 
-Copyright (c) 2016, School of Computing, National University of Singapore.  
+Copyright (c) 2020, School of Computing, National University of Singapore.  
 All rights reserved.
 
 Project homepage: http://www.comp.nus.edu.sg/~tants/gqm.html
 
-If you use gQM and you like it or have comments on its usefulness etc., we 
+If you use gDP2d and you like it or have comments on its usefulness etc., we 
 would love to hear from you at <tants@comp.nus.edu.sg>. You may share with us
 your experience and any possibilities that we may improve the work/code.
 
