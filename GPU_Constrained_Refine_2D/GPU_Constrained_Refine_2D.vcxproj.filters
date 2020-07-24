@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Predicates">
+      <UniqueIdentifier>{b8bb2029-a754-409a-bff9-ab3aa5afa8e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGAL">
+      <UniqueIdentifier>{eb1a00dc-ccdc-47b8-847d-b0ec6446d489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{dd82af41-8a4a-4dd1-888d-9f31420127bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CUDA">
+      <UniqueIdentifier>{a67c76d8-4316-4a1b-84c4-b01cca29989d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Experiment">
+      <UniqueIdentifier>{6e2f8a20-9d21-49a0-96b5-75a97b81c363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InputGenerator">
+      <UniqueIdentifier>{c0a9f71b-8bf1-47cf-b6da-34a1fbfedbb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{d639ff12-2b4b-4831-8226-b559e40ef734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Triangle">
+      <UniqueIdentifier>{44ebe0b9-c22d-4a08-8212-472a3f83522f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer">
+      <UniqueIdentifier>{2a618ca5-e76b-44c8-b952-98ddaaf09df0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="predicates.cpp">
+      <Filter>Predicates</Filter>
+    </ClCompile>
+    <ClCompile Include="triangle.cpp">
+      <Filter>Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshChecker.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="meshRefineTriangle.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="meshRefineGPU.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="ExperimentTriangle.cpp">
+      <Filter>Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="ExperimentGPU.cpp">
+      <Filter>Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="ExperimentStatistic.cpp">
+      <Filter>Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="ExperimentInput.cpp">
+      <Filter>Experiment</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="predicates.h">
+      <Filter>Predicates</Filter>
+    </ClInclude>
+    <ClInclude Include="triangle.h">
+      <Filter>Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaCCW.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaRefine.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshChecker.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaMesh.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaThrust.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaStructure.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaFlipFlop.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaSplitEncsegs.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaSplitTriangles.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaSplitElements.h">
+      <Filter>CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="meshRefine.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer.h">
+      <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Experiment.h">
+      <Filter>Experiment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="cudaFlipFlop.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaThrust.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaSplitEncsegs.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaSplitTriangles.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaMesh.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaRefine.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cudaSplitElements.cu">
+      <Filter>CUDA</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>
