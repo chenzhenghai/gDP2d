@@ -12,14 +12,60 @@ Paper:
 * The development environment: Visual Studio 2017 and CUDA 9.0 (Please use x64 and Release mode.)
 
 --------------------------------------------------------------------------
-Refinement Routine (located in refine.h and refine.cu):  
-void GPU_Refine_Quality(  
-&nbsp;&nbsp;&nbsp;&nbsp; triangulateio *input,  
-&nbsp;&nbsp;&nbsp;&nbsp; triangulateio *result,  
-&nbsp;&nbsp;&nbsp;&nbsp; double theta,  
-&nbsp;&nbsp;&nbsp;&nbsp; InsertPolicy insertpolicy,  
-&nbsp;&nbsp;&nbsp;&nbsp; DeletePolicy deletepolicy,  
-&nbsp;&nbsp;&nbsp;&nbsp; int mode,  
-&nbsp;&nbsp;&nbsp;&nbsp; int debug_iter,  
-&nbsp;&nbsp;&nbsp;&nbsp; PStatus **ps_debug,  
-&nbsp;&nbsp;&nbsp;&nbsp; TStatus **ts_debug)  
+Refinement Routine for synthetic and real-world datasets (located in GPU_Constrained_Refine_2D/meshRefine.h and meshRefineGPU.cpp):
+
+void refineInputByGPU_Synthetic(  
+&nbsp;&nbsp;&nbsp;&nbsp; char* input_path,  
+&nbsp;&nbsp;&nbsp;&nbsp; double input_theta,  
+&nbsp;&nbsp;&nbsp;&nbsp; double input_size,
+&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; SyntheticParam input_sparam,
+&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)
+
+void refineInputByGPU_Real(  
+&nbsp;&nbsp;&nbsp;&nbsp; char* input_path, 
+&nbsp;&nbsp;&nbsp;&nbsp; char* input_file,
+&nbsp;&nbsp;&nbsp;&nbsp; double input_theta,  
+&nbsp;&nbsp;&nbsp;&nbsp; double input_size,
+&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,
+&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)
+
+
+char* input_path:  
+The path for the folder that contains input files.
+
+char* input_file:  
+Input filename.
+
+double input_theta:  
+Minimum allowable angle. Theoretically, it cannot be smaller than 20.7 degree. The triangle in final mesh wouldn't contain angles smaller than input_theta, except those exist in the input PSLG.
+
+double input_size:  
+Maximum allowable edge length. The final mesh wouldn't contain edges longer than input_size.
+
+int enc_mode:  
+Encroachment mode. When mode is 1, Ruppert's algorithm is used; otherwise, Chew's is used.
+
+int run_mode:  
+Running mode. When mode is 1, the new approach in Paper 2 is used; otherwise, the old approach in Paper 1 is used.
+
+int filter_mode:  
+Filtering mode. When mode is 1, fast filtering is used; otherwise, no filtering is used.
+
+int unify_mode:  
+Unifying mode. When mode is 1, subsegments and triangles are split together; otherwise, they are split separately.
+
+SyntheticParam input_sparam:  
+The input parameters for synthetic datasets; see GPU_Constrained_Refine_2D/meshRefine.h
+
+char* output_path:  
+The path for the folder to contain output files.
+
+--------------------------------------------------------------------------
+Proceed to GPU_Constrained_Refine_2D/main.cpp to check how to call GPU refinement routines properly.
