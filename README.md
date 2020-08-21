@@ -17,25 +17,24 @@ Refinement Routine for synthetic and real-world datasets (located in GPU_Constra
 void refineInputByGPU_Synthetic(  
 &nbsp;&nbsp;&nbsp;&nbsp; char* input_path,  
 &nbsp;&nbsp;&nbsp;&nbsp; double input_theta,  
-&nbsp;&nbsp;&nbsp;&nbsp; double input_size,
-&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; SyntheticParam input_sparam,
-&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)
+&nbsp;&nbsp;&nbsp;&nbsp; double input_size,  
+&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; SyntheticParam input_sparam,  
+&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)  
 
 void refineInputByGPU_Real(  
-&nbsp;&nbsp;&nbsp;&nbsp; char* input_path, 
-&nbsp;&nbsp;&nbsp;&nbsp; char* input_file,
+&nbsp;&nbsp;&nbsp;&nbsp; char* input_path,  
+&nbsp;&nbsp;&nbsp;&nbsp; char* input_file,  
 &nbsp;&nbsp;&nbsp;&nbsp; double input_theta,  
-&nbsp;&nbsp;&nbsp;&nbsp; double input_size,
-&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,
-&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)
-
+&nbsp;&nbsp;&nbsp;&nbsp; double input_size,  
+&nbsp;&nbsp;&nbsp;&nbsp; int enc_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int run_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int filter_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; int unify_mode,  
+&nbsp;&nbsp;&nbsp;&nbsp; char* output_path)  
 
 char* input_path:  
 The path for the folder that contains input files.
